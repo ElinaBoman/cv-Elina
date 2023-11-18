@@ -35,6 +35,8 @@ ${listItemsHTML.join("\n")}
 }
 
 function fetchGitHubInformation(event) {
+    $("#gh-user-data").html("");
+    $("#gh-repo-data").html("");
 
     var username = $("#gh-username").val();
     if (!username) {
@@ -67,3 +69,5 @@ $.when(
             }
         });
 }
+
+$(document).ready(fetchGitHubInformation);
